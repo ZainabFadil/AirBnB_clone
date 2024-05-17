@@ -2,6 +2,7 @@
 """
 model conatains unit tests of "BaseModel" class
 """
+import os
 import unittest
 from models.base_model import BaseModel
 
