@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 """
+module to define the "baseClass"
 """
 import uuid
 from datetime import datetime
 
 
 class BaseModel:
+    """
+    define all common methods and attributes of the classes
+    """
     def __init__(self):
         self.id = str(uuid.uuid4())
         self.created_at = datetime.utcnow()
