@@ -2,6 +2,7 @@
 """
 module to define the "baseClass"
 """
+import models
 import uuid
 from datetime import datetime
 

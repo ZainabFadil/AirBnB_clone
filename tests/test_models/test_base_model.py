@@ -1,27 +1,36 @@
 #!/usr/bin/python3
 """
-model conatains unit tests of "BaseModel" class
+Module for BaseModel unittest
 """
 import os
 import unittest
 from models.base_model import BaseModel
 
+
+
 class testBaseModel(unittest.TestCase):
-    def initTest(self):
+    def testInit(self):
         parentClass = BaseModel()
 
         self.assertIsNotNone(parentClass.id)
         self.assertIsNotNone(parentClass.created_at)
         self.assertIsNotNone(parentClass.updated_at)
 
-    def saveTest(self):
+
+    def testsave(self):
         parentClass = BaseModel()
 
         old = parentClass.updated_at
+
         new = parentClass.save()
+
         self.assertNotEqual(old, new)
-    
-    def to_dictTest(self):
+
+
+    def test_to_dict(self):
+        """
+        Test for to_dict method
+        """
         parentClass = BaseModel()
 
         temp = parentClass.to_dict()
@@ -33,7 +42,8 @@ class testBaseModel(unittest.TestCase):
         self.assertEqual(temp["created_at"], parentClass.created_at.isoformat())
         self.assertEqual(temp["updated_at"], parentClass.updated_at.isoformat())
 
-    def strTest(self):
+
+    def test_str(self):
         parentClass = BaseModel()
 
         self.assertTrue(str(parentClass).startswith("[BaseModel]"))
