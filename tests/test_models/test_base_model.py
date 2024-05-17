@@ -27,7 +27,7 @@ class testBaseModel(unittest.TestCase):
         self.assertNotEqual(old, new)
 
 
-    def test_to_dict(self):
+    def testTo_dict(self):
         """
         Test for to_dict method
         """
@@ -43,10 +43,10 @@ class testBaseModel(unittest.TestCase):
         self.assertEqual(temp["updated_at"], parentClass.updated_at.isoformat())
 
 
-    def test_str(self):
+    def testStr(self):
         parentClass = BaseModel()
 
-        self.assertTrue(str(parentClass).startswith("[BaseModel]"))
+        self.assertTrue(str(parentClass).startswith('[BaseModel]'))
         self.assertIn(parentClass.id, str(parentClass))
         self.assertIn(str(parentClass.__dict__), str(parentClass))
 
