@@ -38,5 +38,5 @@ class BaseModel:
         return string format that contain class name, class id and class dict
         """
         class_name = self.__class__.__name__
-        ret = "({}) ({}) {}".format(class_name, self.id, self.__dict__)
+        ret = "[{}] ({}) {}".format(class_name, self.id, self.__dict__)
         return ret
