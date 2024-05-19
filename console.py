@@ -8,7 +8,7 @@ class HBNBCommand(cmd.Cmd):
     """
     class that uesed to display prompt
     """
-    prompt = "(hbnb)"
+    prompt = "(hbnb) "
 
     def do_quit(self, arg):
         """
