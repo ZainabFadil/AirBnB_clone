@@ -10,7 +10,7 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = "(hbnb) "
 
-    def do_quit(self, arg):
+    def do_quit(self, _):
         """
         implement quit function
         """
@@ -21,10 +21,11 @@ class HBNBCommand(cmd.Cmd):
 
         print("Quit command to exit the program")
     
-    def EOF(self, arg):
-        """end of the file, handle no command inserted"""
-        print()
-        return True
+    def emptyline(self):
+        """Do nothing on empty line"""
+        pass
+
+    do_EOF = do_quit
     
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
