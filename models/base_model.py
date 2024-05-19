@@ -12,6 +12,9 @@ class BaseModel:
     define all common methods and attributes of the classes
     """
     def __init__(self, *args, **kwargs):
+        """
+        for initiating instructor
+        """
         date_format = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid.uuid4())
         self.created_at = datetime.utcnow()
@@ -52,3 +55,4 @@ class BaseModel:
         class_name = self.__class__.__name__
         ret = "[{}] ({}) {}".format(class_name, self.id, self.__dict__)
         return ret
+    
