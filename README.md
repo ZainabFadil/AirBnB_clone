@@ -3,4 +3,4 @@ AirBnB_clone
 Welcome to the AirBnB clone project!
 Before starting, please read the AirBnB concept page
 module
-Welcome to the AirBnB clone    to validate all our classes and storage engine  
+ to the AirBnB clone    to validate all our classes and storage engine  
