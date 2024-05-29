@@ -1,0 +1,31 @@
+/* amenities styles  */
+
+.amenities h2 ,
+.review h2
+{
+    
+   font-size: 16px;
+	border-bottom: 1px solid #dddddd;
+	min-height: 0;
+	width: 100%;
+	text-align: left;
+ 
+   
+}
+.amenities .ulist {
+   
+   display: flex;
+    
+   }
+   article .amenities ,
+    article .review {
+    margin-top: 40px;
+    width: 100%;
+   
+   }
+.amenities .first-child  li{
+position: relative;
+bottom: -10px;
+margin-bottom: 50px ;
+
+} 
